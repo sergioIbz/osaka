@@ -31,13 +31,15 @@ class Home extends ConsumerWidget {
                       image: DecorationImage(
                         image: const AssetImage('assets/osaka-sky.png'),
                         fit: BoxFit.none,
-                        alignment: Alignment(data.x * 0.1, data.y * 0.1),
+                        alignment: Alignment(data.y * 0.1, data.x * 0.1),
                       ),
                     ),
-                    duration: const Duration(milliseconds: 1000),
+                    duration: const Duration(milliseconds: 2),
+                    curve: Curves.linear,
                   ),
                   AnimatedPositioned(
-                    top: 20 + (21 * data.y),
+                    top: 20 + (10 * data.x),
+                    left: ((320 - 179.9) / 2) + (10 * data.y),
                     duration: const Duration(milliseconds: 500),
                     child: Text(
                       'OSAKA',
@@ -56,9 +58,10 @@ class Home extends ConsumerWidget {
                     ),
                   ),
                   AnimatedPositioned(
-                    bottom: -130 + data.x * 20,
-                    right: -10 + data.x * 20,
+                    bottom: -130 + (data.x * 20),
+                    right: -10 + (data.y * 20),
                     duration: const Duration(milliseconds: 500),
+                    curve: Curves.linear,
                     child: Image.asset(
                       'assets/osaka-tower.webp',
                       height: 500,
@@ -107,13 +110,13 @@ class Home extends ConsumerWidget {
                       ),
                     ),
                   ),
-                  Text(
-                    '$data',
-                    style: const TextStyle(
-                      color: Colors.amber,
-                      fontSize: 30,
-                    ),
-                  )
+                  // Text(
+                  //   '$data',
+                  //   style: const TextStyle(
+                  //     color: Colors.amber,
+                  //     fontSize: 30,
+                  //   ),
+                  // )
                 ],
               ),
             ),

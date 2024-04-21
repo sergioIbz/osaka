@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'home.dart';
+import 'package:osaka/ball_page.dart';
+import 'package:osaka/home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
