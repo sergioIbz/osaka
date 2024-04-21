@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:osaka/gyroscope_provider.dart';
+
+import 'gyroscope_provider.dart';
 
 class BallPage extends ConsumerWidget {
   const BallPage({super.key});

@@ -5,15 +5,16 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'gyroscope_provider.dart';
 
-import 'package:vector_math/vector_math_64.dart' as vector;
-
-class Home extends ConsumerWidget {
-  const Home({super.key});
+class CardGyroscopePage extends ConsumerWidget {
+  const CardGyroscopePage({super.key});
 
   @override
   Widget build(BuildContext context, ref) {
     final gyroscope$ = ref.watch(gyroscopeProvider);
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Card'),
+      ),
       body: Center(
         child: gyroscope$.when(
           data: (data) => SizedBox(
